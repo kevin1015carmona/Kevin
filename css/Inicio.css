@@ -1,0 +1,135 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	height: 1500px;
+	width: 100vw;
+	background-color: red;
+	display: grid;
+	grid-template-rows: 10% 75% 15%;
+}
+
+header {
+	grid-row: 1/2;
+	display: grid;
+	grid-template-rows: 30% 70%;
+	justify-items: end;
+	height: 100%;
+	border-bottom: 5px blue solid;
+}
+
+#menu {
+	grid-row: 1/2;
+	width: 20%;
+	background-color: black;
+}
+
+#menu_des {
+	background-color: green;
+	list-style-type: none;
+	width: 100%;
+	height: 0%;
+	visibility: hidden;
+}
+
+#menu_des > li {
+	border-top: 1px solid red;
+	border-bottom: 1px solid yellow;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@keyframes menu_expand {
+	from {
+		height: 0%;
+		visibility: hidden;
+	}
+	to {
+		height: 100%;
+		visibility: visible;
+	}
+}
+
+@keyframes menu_contract {
+	0% {
+		height: 100%;
+		visibility: visible;
+	}
+	80% {
+		visibility: hidden;
+	}
+	100% {
+		height: 0%;
+		visibility: hidden;
+	}
+}
+/*INICIO MAIN*/
+
+main {
+	display: grid;
+	grid-template-rows: 15% 5% 80%;
+}
+
+#foto {
+	grid-row: 1/2;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#foto_kevin {
+	height: 90%;
+	width: 40%;
+}
+
+#redes {
+	grid-row: 2/3;
+	background-color: blue;
+	display: flex;
+	grid-template-columns: 20% 20% 20% 20%;
+	padding-left: 15%;
+	padding-right: 15%;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#redes > div {
+	height: 100%;
+	width: 20%;
+	background-color: black;
+	display: flex;
+	align-items: center;
+}
+
+#redes > div > a > img {
+	height: 60%;
+	width: 90%;
+}
+
+#about {
+	grid-row: 3/4;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#about > section {
+	height: 10%;
+	width: 90%;
+	background-color: black;
+}
+
+#about > section > img {
+	height: 60%;
+	width: 15%;
+}
+
+#about > section > p {
+	color: white;
+}
